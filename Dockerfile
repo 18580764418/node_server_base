@@ -4,6 +4,8 @@ RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://ar
 && apt-get update \
 && apt-get install -y --no-install-recommends libavahi-compat-libdnssd-dev \
 && apt-get install -y --no-install-recommends cron \
+&& apt-get install -y --no-install-recommends mongodb \
+&& apt-get install -y --no-install-recommends vim \
 && sed -i "s/exit 101/exit 0/" /usr/sbin/policy-rc.d \
 && apt-get clean \
 && mkdir -p /home/Service \
